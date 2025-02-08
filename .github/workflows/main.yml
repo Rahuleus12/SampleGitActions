@@ -7,8 +7,15 @@ on:
 
     jobs:
         deployment:
-            runs-on: ubuntu
+            runs-on: ubuntu-latest
 
             steps:
             - name: Checkout code from github repo
               uses: actions/checkout@v4
+
+            - name: Run some code
+              run: |
+                whoami
+                ls -al
+                pwd
+                cat index.html
