@@ -5,11 +5,11 @@ on:
         branches:
             -main
 
-    jobs:
-        deployment:
-            runs-on: ubuntu-latest
+jobs:
+    deployment:
+        runs-on: ubuntu-latest
 
-            steps:
+        steps:
             - name: Checkout code from github repo
               uses: actions/checkout@v4
 
