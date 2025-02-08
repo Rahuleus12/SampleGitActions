@@ -18,9 +18,3 @@ jobs:
           whoami
           ls -al
           pwd
-          cat index.html
-              run: |
-                whoami
-                ls -al
-                pwd
-                cat index.html
