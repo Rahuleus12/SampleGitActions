@@ -18,3 +18,4 @@ jobs:
           whoami
           ls -al
           pwd
+          cat index.html
