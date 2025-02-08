@@ -28,6 +28,13 @@ jobs:
             port: 22
             source: ./
             target: /home/ubuntu
+
+      - name: Run some code
+        run: |
+          whoami
+          ls -al
+          pwd
+          
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@v1.2.0
         with:
