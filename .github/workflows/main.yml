@@ -22,9 +22,9 @@ jobs:
       - name: Copy files
         uses: appleboy/scp-action@v0.1.7
         with:
-            host: ${{ secrets.HOST }}
-            username: ${{ secrets.USERNAME }}
-            password: ${{ secrets.PASSWORD }}
+            host: ${{ HOST }}
+            username: ${{ USERNAME }}
+            password: ${{ PASSWORD }}
             port: 22
             source: ./
             target: /home/ubuntu
