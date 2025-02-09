@@ -16,7 +16,7 @@ jobs:
       - name: Run some code
         run: |
           whoami
-          ls -al
+          ls -a
           pwd
 
       - name: Copy files
