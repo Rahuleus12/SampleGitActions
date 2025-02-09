@@ -22,25 +22,18 @@ jobs:
       - name: Copy files
         uses: appleboy/scp-action@v0.1.7
         with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}  # Use PASSWORD here instead of KEY
-          port: 22
-          source: ./
-          target: /home/ubuntu
-
-      - name: Run some code
-        run: |
-          whoami
-          ls -al
-          pwd
-          
-      - name: executing remote ssh commands using key
+            host: ${{ secrets.HOST }}
+            username: ${{ secrets.USERNAME }}
+            password: ${{ secrets.PASSWORD }}
+            port: 22
+            source: ./
+            target: /home/ubuntu
+      - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@v1.2.0
         with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.KEY }}  # Use KEY here
-          port: 22
-          script: |
-            sudo cp -r . /var/www/html
+            host: ${{ secrets.HOST }}
+            username: ${{ secrets.USERNAME }}
+            key: ${{ secrets.KEY }}
+            port: 22
+            script: |
+              sudo cp -r . /var/www/html
